@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: voting-service
+  name: ehpp-service
   labels:
-    name: voting-service
-    app: cpm-voting-app
+    name: ehpp-service
+    app: cpm-ehpp-app
 spec:
   type: LoadBalancer
   ports:
   - port: 80
-    targetPort: 80
+    targetPort: 8089
   selector:
-    name: voting-app-pod
-    app: cpm-voting-app
+    name: ehpp-app-pod
+    app: cpm-ehpp-app

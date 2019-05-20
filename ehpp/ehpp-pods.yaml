@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ehpp-app-pod
+  labels:
+    name: ehpp-app-pod
+    app: cpm-ehpp-app
+spec:
+  containers:
+  - name: ehpp-app
+    image: cellpointmobile/ehpp:v2.0.0-RC04
+    ports:
+         - containerPort: 8089
+   imagePullSecrets:
+   - name: registrypullsecret
